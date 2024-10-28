@@ -1,0 +1,14 @@
+type fruit{
+    id:ID!,
+    type:String,
+    price:String
+}
+
+type Query{
+    allFruits(count:Int):[fruit]
+    concreteFruit(id:ID!):fruit
+}
+
+type Mutation{
+    createFruit(type:String!,price:String!):fruit
+}
